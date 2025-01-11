@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goldstar Company Services & Transport LLC</title>
+    <style>
+      
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        header {
+            background: #eae9e9;
+            color: #6e1202;
+            padding: 1rem 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        header img {
+            max-height: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: #6e1202;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        /* New Carousel Styles */
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+            width: 80%;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .carousel-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            border: none;
+            padding: 0;
+        }
+
+        .carousel-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+     
+        section {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .service {
+            flex: 1 1 calc(33.333% - 2rem);
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background: #6e1202;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .services {
+                flex-direction: column;
+            }
+
+            .service {
+                flex: 1 1 100%;
+            }
+
+            .carousel-content h2 {
+                font-size: 2rem;
+            }
+
+            .carousel-content p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Company Logo">
+        <h1>Goldstar Company Services & Transport LLC</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="carousel">
+        <div class="carousel-slide active">
+            <div class="carousel-overlay"></div>
+            <img src="images/camion.jpeg" alt="Goldstar Services">
+            <div class="carousel-content">
+                <h2>Professional Oilfield Services</h2>
+                <p>Your trusted partner in Pecos, TX</p>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <div class="carousel-overlay"></div>
+            <img src="images/camion22.jpeg" alt="Transportation Services">
+            <div class="carousel-content">
+                <h2>Transportation Excellence</h2>
+                <p>Vacuum trucks, flatbeds, and hotshot services</p>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <div class="carousel-overlay"></div>
+            <img src="images/camion33.jpeg" alt="Field Services">
+            <div class="carousel-content">
+                <h2>Comprehensive Field Services</h2>
+                <p>Pressure wash crews and roustabout services</p>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <button class="carousel-dot active"></button>
+            <button class="carousel-dot"></button>
+            <button class="carousel-dot"></button>
+        </div>
+    </div>
+
+      <section id="about">
+        <h2>About Goldstar</h2>
+        <p>We Goldstar Company Services and Transport LLC, are an oilfield service company, operating out of Pecos, TX. We mainly focus on the transportation trade managing vacuum trucks, flatbed trucks, and hotshot. We also cover pressure wash crews, roustabouts, and contract pumpers.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Vacuum Trucks</h3>
+                <p>Efficient and reliable vacuum truck services for your needs.</p>
+            </div>
+            <div class="service">
+                <h3>48' Flatbed Trucks</h3>
+                <p>Safe and secure transportation for heavy equipment and materials.</p>
+            </div>
+            <div class="service">
+                <h3>Hot Shot Service</h3>
+                <p>Quick and dependable delivery services for urgent requirements.</p>
+            </div>
+            <div class="service">
+                <h3>Belly Dumps</h3>
+                <p>Specialized equipment for efficient material transport.</p>
+            </div>
+            <div class="service">
+                <h3>Hydrovacs</h3>
+                <p>Advanced hydro-excavation services for precise and safe digging.</p>
+            </div>
+            <div class="service">
+                <h3>Pressure Wash Crews</h3>
+                <p>High-quality pressure washing services to meet industrial needs.</p>
+            </div>
+            <div class="service">
+                <h3>Roustabouts</h3>
+                <p>Professional support for all your field operations.</p>
+            </div>
+            <div class="service">
+                <h3>Rig Wash Crews / Tank Cleaning</h3>
+                <p>Expert cleaning services to maintain equipment efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Pecos Headquarters Office:</strong> (432) 556-1344</p>
+        <p><strong>General Manager (Field Operations):</strong> Mario Gonzalez - mario.g@oilfields.net</p>
+        <p><strong>24/7 Dispatch:</strong> 432-331-4552 / 361-389-6126</p>
+        <p><strong>Field Equipment Coordinator:</strong> Hugo Subalsky - (432) 556-1228 / (915) 412-0934</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Goldstar Company Services & Transport LLC. All Rights Reserved created by Ignacio Padilla.</p>
+    </footer>
+
+    <script>
+           document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+
+            // Add click events to dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                });
+            });
+
+            // Auto-advance slides
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+</body>
+</html>
